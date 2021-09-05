@@ -104,7 +104,7 @@ class TestingModelMeta(type):
         return super(TestingModelMeta, cls).__new__(cls, name, bases, dct)
 
 
-class Testing Model:
+class TestingModel:
     def __init__(self, param):
         self.param = param
 
