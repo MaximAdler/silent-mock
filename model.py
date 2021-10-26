@@ -45,7 +45,7 @@ class ModelsConstructor:
                 table = model.__class__
                 await table.delete.where(table.id == model.id).gino.status()
                 if 'name' in list(table._column_name_map):
-                    await tablle.delete.where(table.name.like('Test %')).gino.status()
+                    await table.delete.where(table.name.like('Test %')).gino.status()
             except ForeignKeyViolationError:
                 stack.append(model)
 
